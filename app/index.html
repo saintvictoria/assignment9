@@ -33,7 +33,7 @@
             </div>
           </div>
       </div>
-      <div id="repo_list"></div>
+      <ul id="repo_list"></ul>
 
 
 
@@ -42,14 +42,15 @@
 <div class="repo-block">
 <div class="repo-info">
 <span class="repo-name">{{repo.name}}</span>
-<span class="repo-lang"></span>
-<span class="repo-star"></span>
-<span class="repo-fork"></span>
+<span class="repo-lang">{{repo.language}}</span>
+<span class="repo-star">{{repo.stargazers_count}}</span>
+<span class="repo-fork">{{repo.forks}}</span>
 </div>
 <div class="repo-desc">
-
+{{repo.description}}
 </div>
 <div class="repo-updated">
+Updated {{repo.days_ago}} days ago.
 
 </div>
 </div>

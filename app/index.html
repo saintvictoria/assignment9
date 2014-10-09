@@ -28,17 +28,32 @@
       <div class="header">
         <span class="mega-octicon octicon-mark-github"></span>
           <div class="search-bar">
-    <div class="search-and-submit">
-      <input type="search" placeholder="Search GitHub" />
-
-    </div>
-  </div>
-
+            <div class="search-and-submit">
+              <input type="search" placeholder="Search GitHub" />
+            </div>
+          </div>
       </div>
+      <div id="repo_list"></div>
+
 
 
     </div>
+<script id="repo-temp" type="text/x-underscore-template">
+<div class="repo-block">
+<div class="repo-info">
+<span class="repo-name">{{repo.name}}</span>
+<span class="repo-lang"></span>
+<span class="repo-star"></span>
+<span class="repo-fork"></span>
+</div>
+<div class="repo-desc">
 
+</div>
+<div class="repo-updated">
+
+</div>
+</div>
+</script>
 
 
     <!-- build:js scripts/vendor.js -->

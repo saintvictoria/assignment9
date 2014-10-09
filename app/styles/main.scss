@@ -4,24 +4,48 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+Body {
+  min-width: 1020px;
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   color: #333;
+  background-color: #fff;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+#container {
+
+}
+.header {
+padding-top: 10px;
+padding-bottom: 10px;
+min-width: 1000px;
+background-color: #f5f5f5;
+border-bottom: 2px solid #e5e5e5;
+}
+.search-bar {
+  position: relative;
+  display: inline-block;
+
+  input {
+    @include box-sizing(border-box);
+    display: block;
   }
+
+  div.search-and-submit {
+    position: relative;
+
+    input[type=search] {
+      @include appearance(none);
+      width: 100%;
+      padding: .5em .8em;
+      font-size: .9em;
+      font-style: italic;
+      border-radius: $base-border-radius;
+      margin-left: 3px;
+      margin-right: 120px;
+    }
+
+    }
+  }
+.mega-octicon {
+  margin-left: 165px;
 }

@@ -1,4 +1,4 @@
-[
+var repos = [
 {
 "id": 24481814,
 "name": "Assignments",

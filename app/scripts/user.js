@@ -1,4 +1,4 @@
-{
+var user = {
 "login": "saintvictoria",
 "id": 8070653,
 "avatar_url": "https://avatars.githubusercontent.com/u/8070653?v=2",

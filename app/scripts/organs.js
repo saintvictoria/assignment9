@@ -1,4 +1,4 @@
-[
+var organisations = [
 {
 "login": "tiy-atlanta-js",
 "id": 7996991,

@@ -33,41 +33,46 @@
             </div>
           </div>
       </div>
-      <ul id="repo_list"></ul>
+
+      <ul id="sidebar"></ul>
+      <script type="text/template" id="user_stuff">
+          <img src="{{avatar_url}}" style="width:150px" />
 
 
+          <div class="name">{{name}}</div>
+          <div class="email">{{email}}</div>
+          <div class="blog">{{blog}}</div>
+          <div class="date">{{created_at}}</div>
+          <span class="fol">{{followers}}</span>
+          <span class="foling">{{following}}</span>
 
-    </div>
-<script id="repo-temp" type="text/x-underscore-template">
-<div class="repo-block">
-<div class="repo-info">
-<span class="repo-name">{{repo.name}}</span>
-<span class="repo-lang">{{repo.language}}</span>
-<span class="repo-star">{{repo.stargazers_count}}</span>
-<span class="repo-fork">{{repo.forks}}</span>
-</div>
+            </script>
+
+            <ul id="undersidebar"></ul>
+            <script id="org_stuff" type="text/template">
+            <div class="organs">
+              <span>Organizations</span>
+              <img src={{"avatar_url"}}  />
+
+            </div>
+            </script>
+
+<ul id="repo_list"></ul>
+  <script id="repo-temp" type="text/x-underscore-template">
+    <div class="repo-block">
+      <div class="repo-info">
+        <span class="repo-name">{{name}}</span>
+        <span class="repo-lang">{{language}}</span>
+        <span class="repo-star">{{stargazers_count}}</span>
+        <span class="repo-fork">{{forks}}</span>
+      </div>
 <div class="repo-desc">
-{{repo.description}}
-</div>
-<div class="repo-updated">
-Updated {{repo.days_ago}} days ago.
-
+{{description}}
 </div>
 </div>
 </script>
+</div>
 
-<ul id="sidebar"></ul>
-<script type="text/template" id="user_stuff">
-    <img class="avatar" src="{{avatar_url}}" style="width:230px" />
-
-    <ul>
-    <li>{{name}}</li>
-    <li>{{login}}</li>
-    <li>{{email}}</li>
-    <li>{{blog}}</li>
-    <li>{{created_at}}</li>
-      </ul>
-      </script>
 
 
     <!-- build:js scripts/vendor.js -->
@@ -78,9 +83,6 @@ Updated {{repo.days_ago}} days ago.
     <!-- endbuild -->
         <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
-        <script src="scripts/repos.js"></script>
-        <script src="scripts/organs.js"></script>
-        <script src="scripts/user.js"></script>
         <script src="scripts/main.js"></script>
 
         <!-- endbuild -->

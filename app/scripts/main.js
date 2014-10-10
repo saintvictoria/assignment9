@@ -33,5 +33,8 @@ var orgTemplate = $('#org_stuff').html(),
 
       $.getJSON(urlorg).done( function (org_data){
 
-        $('#undersidebar').append(rendered(org_data));
-      });
+      _.each(org_data, function(y){
+      $('#undersidebar').append(rendered(y));
+
+  })
+  });

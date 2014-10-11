@@ -21,72 +21,70 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-  </head>
-  <body>
-    <div id="container">
-
-      <div class="header">
-        <span class="mega-octicon octicon-mark-github">
-          <span class="search-bar">
-          <span class="search-and-submit">
-            <input type="search" placeholder="Search GitHub" />
-          </span>
-        </span>
-        </span>
-
-      </div>
-<div class="leftsidebar">
-      <ul id="sidebar"></ul>
-      <script type="text/template" id="user_stuff">
-          <img class="avatar"src="{{avatar_url}}" style="width:230px" />
-
-
+    <script type="text/template" id="user_stuff">
+          <img class="avatar" src="{{avatar_url}}" />
           <div class="name"><h3>{{name}}</h3></div>
           <div class="login">{{login}}</div>
           <div class="email octicon octicon-mail">  {{email}}</div>
           <div class="blog octicon octicon-link">  {{blog}}</div>
           <div class="date octicon octicon-clock">  {{created_at}}</div>
-
           <div class="user-numbers">
             <span class="fol">{{followers}}</span>
             <span id="star"></span>
             <span class="foling">{{following}}</span>
           </div>
-
-            </script>
-
-            <ul id="undersidebar"></ul>
-            <script id="org_stuff" type="text/x-template">
-            <div class="organs">
-              <span><h3>Organizations</h3></span>
-              <img class="organiz"src="{{avatar_url}}"/>
-
-            </div>
-            </script>
-          </div>
-
-
-<div class="right-side">
-  <span class="octicon octicon-diff-added"> Contributions</span>
-  <span class="octicon octicon-repo"> Repositories</span>
-  <span class="octicon octicon-rss"> Public activity</span>
-
-
-<ul id="repo_list"></ul>
-  <script id="repo-temp" type="text/x-underscore-template">
-    <div class="repo-block">
-      <div class="repo-info">
-        <span class="repo-name">{{name}}</span>
-        <span class="repo-lang">{{language}}</span>
-        <span class="repo-star">{{stargazers_count}}</span>
-        <span class="repo-fork">{{forks}}</span>
+    </script>
+    <script id="org_stuff" type="text/x-template">
+      <div class="organs">
+      <span><h3>Organizations</h3></span>
+      <img class="organiz"src="{{avatar_url}}"/>
       </div>
-<div class="repo-desc">
-{{description}}
-</div>
-</div>
-</script>
-</div>
+    </script>
+    <script id="repo-temp" type="text/x-underscore-template">
+        <div class="repo-block">
+          <div class="repo-info">
+            <span class="repo-name">{{name}}</span>
+            <span class="repo-lang">{{language}}</span>
+            <span class="repo-star">{{stargazers_count}}</span>
+            <span class="repo-fork">{{forks}}</span>
+          </div>
+          <div class="repo-desc">
+          {{description}}
+          </div>
+        </div>
+    </script>
+  </head>
+  <body>
+  <div id="container">
+
+    <div class="header">
+      <span class="mega-octicon octicon-mark-github">
+      <span class="search-bar">
+      <span class="search-and-submit">
+      <input type="search" placeholder="Search GitHub" />
+      </span>
+      </span>
+      </span>
+
+    </div>
+    <div class="leftsidebar">
+          <ul id="sidebar"></ul>
+
+          <ul id="undersidebar"></ul>
+
+
+    </div>
+
+
+    <div class="right-side">
+      <span class="octicon octicon-diff-added"> Contributions</span>
+      <span class="octicon octicon-repo"> Repositories</span>
+      <span class="octicon octicon-rss"> Public activity</span>
+
+
+    <ul id="repo_list"></ul>
+
+    </div>
 
 
 

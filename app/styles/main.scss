@@ -4,7 +4,7 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
-Body {
+body {
   min-width: 1020px;
   font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   color: #333;
@@ -57,6 +57,7 @@ border-bottom: 2px solid #e5e5e5;
   width: 25%;
   border: 2px solid black;
   .avatar {
+    width: 230px;
     border-radius: 85px;
 
   }

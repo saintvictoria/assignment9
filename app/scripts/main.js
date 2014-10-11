@@ -5,8 +5,9 @@ _.templateSettings = {
 var url = 'https://api.github.com/users/saintvictoria';
 var urlrepo = 'https://api.github.com/users/saintvictoria/repos';
 var urlorg ='https://api.github.com/users/saintvictoria/orgs';
+var urlstar ='https://api.github.com/users/saintvictoria/starred'
 
-var repoTemplate =$('#repo-temp').text(),
+var repoTemplate =$('#repo-temp').html(),
     renders = _.template(repoTemplate);
 
     $.getJSON(urlrepo).done(function (repo_data){
@@ -38,3 +39,8 @@ var orgTemplate = $('#org_stuff').html(),
 
   })
   });
+
+  $.getJSON(urlstar).done(function (star_data){
+       $('#star').html(''+star_data.length)
+
+    });

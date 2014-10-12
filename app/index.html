@@ -25,9 +25,14 @@
           <img class="avatar" src="{{avatar_url}}" />
           <div class="name"><h3>{{name}}</h3></div>
           <div class="login">{{login}}</div>
-          <div class="email octicon octicon-mail">  {{email}}</div>
-          <div class="blog octicon octicon-link">  {{blog}}</div>
-          <div class="date octicon octicon-clock">  {{created_at}}</div>
+          <div class="user-links">
+             <div><span class="octicon octicon-mail"></span>
+             <a class="email" href="mailto:{{email}}">{{email}}</a></div>
+             <div><span class="octicon octicon-link"></span>
+             <a class="blog" href="{{blog}}">{{blog}}</a></div>
+             <div><span class="octicon octicon-clock"></span>
+             <span class="date">{{created_at}}</span></div>
+          </div>
           <div class="user-numbers">
             <span class="fol">{{followers}}</span>
             <span id="star"></span>
@@ -37,25 +42,27 @@
     <script id="org_stuff" type="text/x-template">
       <div class="organs">
       <span><h3>Organizations</h3></span>
-      <img class="organiz"src="{{avatar_url}}"/>
+      <img class="organiz" src="{{avatar_url}}"/>
       </div>
     </script>
     <script id="repo-temp" type="text/x-underscore-template">
-        <div class="repo-block">
+        <li class="repo-block">
           <div class="repo-info">
-            <span class="repo-name">{{name}}</span>
-            <span class="repo-lang">{{language}}</span>
-            <span class="repo-star">{{stargazers_count}}</span>
-            <span class="repo-fork">{{forks}}</span>
+              <a class="repo-name" href="{{html_url}}">{{name}}</a>
+            <div class="repo-elements">
+                <span class="repo-lang">{{language}}</span>
+                <span class="repo-star octicon octicon-star">{{stargazers_count}}</span>
+                <span class="repo-fork octicon octicon-git-branch">{{forks}}</span>
+            </div>
           </div>
           <div class="repo-desc">
           {{description}}
           </div>
-        </div>
+        </li>
     </script>
   </head>
   <body>
-  <div id="container">
+
 
     <div class="header">
       <span class="mega-octicon octicon-mark-github">
@@ -67,10 +74,11 @@
       </span>
 
     </div>
+  <main>
     <div class="leftsidebar">
-          <ul id="sidebar"></ul>
+          <div id="sidebar"></div>
 
-          <ul id="undersidebar"></ul>
+          <div id="undersidebar"></div>
 
 
     </div>
@@ -84,7 +92,7 @@
 
     <ul id="repo_list"></ul>
 
-    </div>
+  </main>
 
 
 

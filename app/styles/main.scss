@@ -11,7 +11,11 @@ body {
   background-color: #fff;
 }
 
-#container {
+main {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
 
 }
 .header {
@@ -62,6 +66,16 @@ border-bottom: 2px solid #e5e5e5;
 
   }
 }
+.user-links {
+    color: #4183c4;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .octicon {
+      font-size: 14px;
+      color: gray;
+    }
+}
 .organiz {
   height: 42px;
   width: 42px;
@@ -69,9 +83,26 @@ border-bottom: 2px solid #e5e5e5;
 }
 
 .right-side {
-  float: right;
+  float: left;
   width: 75%;
-  border: 2px solid black;
+}
+
+.repo-block {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  .repo-elements {
+    float: right;
+    color: #888;
+    }
+  .repo-name {
+    color: #4183c4;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 8px;
+
+  }
 }
 .octicon {
   border: 2px solid red;

@@ -54,15 +54,23 @@ border-bottom: 2px solid #e5e5e5;
   margin-left: 165px;
 }
 .leftsidebar {
-  text-align: right;
+
   padding-right: 20px;
   padding-top: 20px;
   float: left;
   width: 25%;
-  border: 2px solid black;
   .avatar {
     width: 230px;
     border-radius: 85px;
+
+  }
+  .name {
+    font-size: 26px;
+
+  }
+  .login {
+    font-size: 20px;
+    color: #666;
 
   }
 }
@@ -76,10 +84,26 @@ border-bottom: 2px solid #e5e5e5;
       color: gray;
     }
 }
+.user-numbers {
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    color: #4183c4;
+}
+.organs {
+  margin-right: 35px;
+}
 .organiz {
   height: 42px;
   width: 42px;
   margin-right:100px;
+  
 }
 
 .right-side {
@@ -103,7 +127,4 @@ border-bottom: 2px solid #e5e5e5;
     margin-bottom: 8px;
 
   }
-}
-.octicon {
-  border: 2px solid red;
 }

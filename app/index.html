@@ -23,7 +23,7 @@
     <!-- endbuild -->
     <script type="text/template" id="user_stuff">
           <img class="avatar" src="{{avatar_url}}" />
-          <div class="name"><h3>{{name}}</h3></div>
+          <div class="name">{{name}}</div>
           <div class="login">{{login}}</div>
           <div class="user-links">
              <div><span class="octicon octicon-mail"></span>
@@ -57,6 +57,9 @@
           </div>
           <div class="repo-desc">
           {{description}}
+          </div>
+          <div class="repo-date">
+          Updated {{updatedDate}}
           </div>
         </li>
     </script>
@@ -110,6 +113,7 @@
           <li>Sources</li>
           <li>Forks</li>
           <li>Mirrors</li>
+        </ul>
     </div>
 
 

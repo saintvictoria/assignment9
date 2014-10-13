@@ -43,6 +43,6 @@ var orgTemplate = $('#org_stuff').html(),
   });
 
   $.getJSON(urlstar).done(function (star_data){
-       $('#star').html(''+star_data.length)
+       $('#star').html(''+star_data.length);
 
     });

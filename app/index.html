@@ -43,13 +43,15 @@
             <span class="foling">{{following}}</span>
           </div>
     </script>
-    <script id="org_stuff" type="text/x-template">
+
+    <script type="text/template" id="org_stuff">
       <div class="organs">
       <span><h3>Organizations</h3></span>
       <img class="organiz" src="{{avatar_url}}"/>
       </div>
     </script>
-    <script id="repo-temp" type="text/x-underscore-template">
+
+    <script id="repo-temp" type="text/template">
         <li class="repo-block">
           <div class="repo-info">
               <a class="repo-name" href="{{html_url}}">{{name}}</a>
@@ -59,12 +61,8 @@
                 <span class="repo-fork octicon octicon-git-branch">{{forks}}</span>
             </div>
           </div>
-          <div class="repo-desc">
-          {{description}}
-          </div>
-          <div class="repo-date">
-          Updated {{updatedDate}}
-          </div>
+          <div class="repo-desc">{{description}}</div>
+          <div class="repo-date">Updated {{updatedDate}}</div>
         </li>
     </script>
   </head>

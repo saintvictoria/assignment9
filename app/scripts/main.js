@@ -13,7 +13,9 @@ var repoTemplate =$('#repo-temp').html(),
     $.getJSON(urlrepo).done(function (repo_data){
 
       _.each(repo_data, function(x){
-        $('#repo_list').append(renders(x));
+        x.updatedDate = moment(x.updated_at).fromNow();
+        var output = renders(x);
+        $('#repo_list').append(output);
 
   })
   });

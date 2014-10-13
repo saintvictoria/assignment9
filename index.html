@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>assignment9</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+    <script src="scripts/vendor/moment.js"></script>
+
+    <script type="text/template" id="user_stuff">
+          <img class="avatar" src="{{avatar_url}}" />
+          <div class="name">{{name}}</div>
+          <div class="login">{{login}}</div>
+          <div class="user-links">
+             <div><span class="octicon octicon-mail"></span>
+             <a class="email" href="mailto:{{email}}">{{email}}</a></div>
+             <div><span class="octicon octicon-link"></span>
+             <a class="blog" href="{{blog}}">{{blog}}</a></div>
+             <div><span class="octicon octicon-clock"></span>
+             <span class="date">{{createDate}}</span></div>
+          </div>
+          <div class="user-numbers">
+            <span class="fol">{{followers}}</span>
+            <span id="star"></span>
+            <span class="foling">{{following}}</span>
+          </div>
+    </script>
+
+    <script type="text/template" id="org_stuff">
+      <div class="organs">
+      <span><h3>Organizations</h3></span>
+      <img class="organiz" src="{{avatar_url}}"/>
+      </div>
+    </script>
+
+    <script id="repo-temp" type="text/template">
+        <li class="repo-block">
+          <div class="repo-info">
+              <a class="repo-name" href="{{html_url}}">{{name}}</a>
+            <div class="repo-elements">
+                <span class="repo-lang">{{language}}</span>
+                <span class="repo-star octicon octicon-star">{{stargazers_count}}</span>
+                <span class="repo-fork octicon octicon-git-branch">{{forks}}</span>
+            </div>
+          </div>
+          <div class="repo-desc">{{description}}</div>
+          <div class="repo-date">Updated {{updatedDate}}</div>
+        </li>
+    </script>
+  </head>
+  <body>
+
+
+    <div class="header">
+      <span class="mega-octicon octicon-mark-github">
+      <span class="search-bar">
+      <span class="search-and-submit">
+      <input type="search" placeholder="Search GitHub" />
+      </span>
+      </span>
+      </span>
+
+      <span class="header-link">Explore</span>
+      <span class="header-link">Gist</span>
+      <span class="header-link">Blog</span>
+      <span class="header-link-helpLink">Help</span>
+
+
+    </div>
+  <main>
+    <div class="leftsidebar">
+          <div id="sidebar"></div>
+
+          <div id="undersidebar"></div>
+
+
+    </div>
+
+
+    <div id="right-side">
+
+      <div class="upper-nav">
+        <div class="minibutton">
+          <span class="octicon octicon-pencil"></span>Edit Profile</div>
+        <ul>
+        <li><span class="octicon octicon-diff-added"></span>
+        <span class="contri">Contributions</span></li>
+        <li class="selected-tab"><span class="octicon octicon-repo"></span>
+        <span class="reposit">Repositories</span></li>
+        <li><span class="octicon octicon-rss"></span>
+        <span class="public">Public activity</span></li>
+      </ul>
+
+      </div>
+
+      <div class="filter-bar">
+        <div class="minibutton-green">
+          <span class="octicon octicon-repo"></span> New</div>
+        <ul>
+          <li class="text">All</li>
+          <li>Public</li>
+          <li>Private</li>
+          <li>Sources</li>
+          <li>Forks</li>
+          <li>Mirrors</li>
+        </ul>
+    </div>
+
+
+    <ul id="repo_list"></ul>
+
+  </main>
+  <footer>
+    <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+  </footer>
+
+
+
+    <script src="scripts/vendor.js"></script>
+        <script src="scripts/token.js"></script>
+        <script src="scripts/main.js"></script>
+</body>
+</html>

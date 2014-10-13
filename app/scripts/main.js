@@ -26,8 +26,8 @@ var template = $('#user_stuff').html(),
 
     $.getJSON(url).done( function (user_data){
 
-
-      $('#sidebar').append(render(user_data));
+    user_data.createDate = moment(user_data.created_at).fromNow();
+    $('#sidebar').append(render(user_data));
 
   });
 
